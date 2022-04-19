@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:," />
+    <title>Events exercises</title>
+    <style type="text/css" media="screen">
+      #content {
+        margin-left: 10px;
+      }
+      #kbd-panel {
+        width: 300px;
+        height: 200px;
+        margin-top: 30px;
+        background-image: url('https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg');
+        background-size: cover;
+      }
+      #keyboard {
+        position: relative;
+        top: 40%;
+        display: flex;
+        justify-content: space-between;
+        border: dotted grey;
+      }
+      .key,
+      .play {
+        border: solid;
+        border-radius: 5px;
+      }
+      .play {
+        transform: scale(1.5);
+        border-color: yellow;
+      }
+      body {
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Drum Keyboard</h2>
+    <div id="content">
+      <a
+        href="https://courses.wesbos.com/account/access/625c9bfb0c9453bc9756cc8d/view/194130650"
+      >
+        Link to lesson
+      </a>
+
+      <div id="kbd-panel">
+        <div id="keyboard">
+          <button
+            class="key"
+            data-audio="./assets/claps/mixkit-one-clap-481.wav"
+          >
+            A <br />
+            clap
+
+            <audio>
+              <source src="./assets/claps/mixkit-one-clap-481.wav" />
+            </audio>
+          </button>
+          <button class="key">
+            S <br />
+            boom
+            <audio>
+              <source src="./assets/claps/mixkit-clapping-fast-480.wav" />
+            </audio>
+          </button>
+          <button class="key">
+            B <br />
+            sh..
+            <audio>
+              <source
+                src="./assets/claps/mixkit-plastic-cd-cover-close-hard-486.wav"
+              />
+            </audio>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <audio controls> -->
+    <!--   <source src="./assets/claps/mixkit-one-clap-481.wav" /> -->
+    <!-- </audio> -->
+
+    <script src="drum.js"></script>
+  </body>
+</html>
