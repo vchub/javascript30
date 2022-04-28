@@ -1,14 +1,24 @@
 function play(btn) {
-  btn.className = 'play';
-  setTimeout(() => {
-    btn.className = 'key';
-  }, 500);
+  btn.classList.add('play');
+  // setTimeout(() => {
+  //   btn.classList.remove('play');
+  // }, 200);
+}
+
+function removeTransition(e) {
+  console.log('in removeTransition, e', e);
+  if (e.propertyName !== 'transform') return;
+  e.target.classList.remove('play');
 }
 
 function clickBtn(event) {
   const btn = event.target;
+  // console.log('btn', btn);
+
   const audio = btn.querySelector('audio');
+  // console.log('audio', audio);
   play(btn);
+  audio.currentTime = 0;
   audio.play();
 }
 
@@ -16,6 +26,7 @@ function clickBtn(event) {
 const buttons = document.querySelectorAll('#keyboard > button');
 for (const b of buttons) {
   b.addEventListener('click', clickBtn);
+  b.addEventListener('transitionend', removeTransition);
 }
 
 // collect all audio and their keys
