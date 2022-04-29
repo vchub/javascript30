@@ -31,6 +31,8 @@
         border-radius: 50%;
         padding: 2rem;
         position: relative;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
       }
       .hand {
         width: 30%;
@@ -40,6 +42,8 @@
         top: 50%;
         left: 50%;
         transform-origin: top left;
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
       }
       .min-hand {
         width: 43%;
