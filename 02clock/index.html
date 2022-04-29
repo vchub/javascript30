@@ -32,7 +32,7 @@
         padding: 2rem;
         position: relative;
       }
-      .hand {
+      .sec-hand {
         width: 40%;
         height: 3px;
         background: black;
@@ -40,12 +40,18 @@
         top: 50%;
         left: 50%;
         transform-origin: top left;
-        transform: rotate(90deg);
+        <!-- transform: rotate(90deg); -->
       }
     </style>
 
     <script>
-      console.log('hi');
+      const intervalId = setInterval(() => {
+        const d = new Date();
+        const angle = d.getSeconds() * 6 + 'deg';
+        const secHand = document.querySelector('.sec-hand');
+        secHand.style.transform = `rotate(${angle})`;
+        console.log(angle);
+      }, 1000);
     </script>
   </body>
 </html>
