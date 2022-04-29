@@ -32,25 +32,37 @@
         padding: 2rem;
         position: relative;
       }
-      .sec-hand {
-        width: 40%;
-        height: 3px;
+      .hand {
+        width: 30%;
+        height: 4px;
         background: black;
         position: relative;
         top: 50%;
         left: 50%;
         transform-origin: top left;
-        <!-- transform: rotate(90deg); -->
+      }
+      .min-hand {
+        width: 43%;
+        background: purple;
+      }
+      .sec-hand {
+        width: 50%;
+        background: yellow;
       }
     </style>
 
     <script>
       const intervalId = setInterval(() => {
         const d = new Date();
-        const angle = d.getSeconds() * 6 + 'deg';
-        const secHand = document.querySelector('.sec-hand');
-        secHand.style.transform = `rotate(${angle})`;
-        console.log(angle);
+        document.querySelector('.sec-hand').style.transform = `rotate(${
+          d.getSeconds() * 6 - 90 + 'deg'
+        })`;
+        document.querySelector('.min-hand').style.transform = `rotate(${
+          d.getMinutes() * 6 - 90 + 'deg'
+        })`;
+        document.querySelector('.hour-hand').style.transform = `rotate(${
+          (d.getHours() % 12) * 30 - 90 + 'deg'
+        })`;
       }, 1000);
     </script>
   </body>
