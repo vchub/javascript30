@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand sec-hand"></div>
+    </div>
+
+    <style>
+      html {
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        font: helvetica;
+        font-size: 10px;
+      }
+      body {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 1rem solid white;
+        border-radius: 50%;
+        padding: 2rem;
+        position: relative;
+      }
+      .hand {
+        width: 40%;
+        height: 3px;
+        background: black;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform-origin: top left;
+        transform: rotate(90deg);
+      }
+    </style>
+
+    <script>
+      console.log('hi');
+    </script>
+  </body>
+</html>
