@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scoped CSS Variables and JS</title>
+  </head>
+  <body>
+    <h2>Update CSS Variable with <span class="h1">JS</span></h2>
+    <div class="controls">
+      <label for="spacing">Spacing</label>
+      <input id="spacing" type="range" min="10" max"200" data-sizing="px">
+
+      <label for="blur">Blur</label>
+      <input id="blur" type="range" min="0" max"25" data-sizing="px">
+
+      <label for="base">Spacing</label>
+      <input id="base" type="color" value="#ffc600" />
+
+      <style>
+        body {
+          text-align: center;
+          background: #193549;
+          color: white;
+          font-family: 'helvetica neue', sans-serif;
+          font-weight: 100;
+          font-size: 50px;
+        }
+        span.h1 {
+          color: yellow;
+        }
+        .controls {
+          margin-bottom: 50px;
+        }
+        input {
+          width: 100px;
+        }
+        :root {
+          --spacing: 10px;
+          --blur: 5px;
+          --base: yellow;
+        }
+        img {
+          border-style: solid;
+          border-width: var(--spacing);
+          border-color: var(--base);
+          filter: blur(var(--blur));
+        }
+      </style>
+    </div>
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+  </body>
+</html>
