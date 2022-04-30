@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <form id="myform" action="" onsubmit="onsubmit()">
+      <label for="name">Name</label>
+      <input type="test" id="name" />
+      <label for="email">E-mail</label>
+      <input type="email" id="email" />
+      <label for="msg">Message</label>
+      <textarea id="msg"></textarea>
+      <label for="volume">Volume</label>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="10"
+        value="5"
+      />
+      <input type="submit" id="submit" />
+    </form>
+
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin: 1em;
+      }
+      form {
+        width: 50%;
+        display: grid;
+        gap: 4%;
+        grid-template-columns: 1fr 1fr;
+      }
+      #msg {
+        height: 5rem;
+      }
+    </style>
+
+    <script>
+      const myform = document.querySelector('#myform').elements,
+        submit = myform['submit'];
+
+      submit.addEventListener('click', (e) => {
+        const data = {};
+        for (x of myform) {
+          data[x.id] = x.value;
+        }
+        console.log('data', data);
+        e.preventDefault();
+      });
+
+      myform['volume'].addEventListener('change', (e) => {
+        console.log('volume', e.target.value);
+      });
+
+      <!-- console.log('e', e); -->
+      <!-- console.log('data', name.value, email.value, msg.value, volume.value); -->
+      <!-- console.log('myform', myform); -->
+      <!-- fd = new FormData(myform); -->
+    </script>
+  </body>
+</html>
