@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <h2>My form</h2>
+      <fieldset>
+        <legend>Who is your favorite pony?</legend>
+        <ul>
+          <li>
+            <label for="pinkie">Pinkie Pie </label>
+            <input
+              id="pinkie"
+              type="radio"
+              name="pony"
+              value="pinkie"
+              checked
+            />
+          </li>
+          <li>
+            <label for="rainbow">Rainbow Dash</label>
+            <input id="rainbow" type="radio" name="pony" value="rainbow" />
+          </li>
+          <li>
+            <label for="twilight">Twilight Sparkle</label>
+            <input id="twilight" type="radio" name="pony" value="twilight" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Hotdog preferences</legend>
+        <ul>
+          <li>
+            <label for="vegan">Vegan</label>
+            <input
+              id="vegan"
+              type="checkbox"
+              name="pref"
+              value="vegan"
+              checked
+            />
+          </li>
+          <li>
+            <label for="onions">Onions</label>
+            <input id="onions" type="checkbox" name="pref" value="onions" />
+          </li>
+          <li>
+            <label for="beef">Beef</label>
+            <input id="beef" type="checkbox" name="pref" value="beef" />
+          </li>
+        </ul>
+      </fieldset>
+      <button>Submit</button>
+    </form>
+
+    <style>
+      fieldset {
+        width: 40%;
+      }
+      ul {
+        list-style-type: none;
+      }
+      label {
+        display: inline-block;
+        width: 30%;
+        text-align: right;
+      }
+    </style>
+  </body>
+</html>
