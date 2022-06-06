@@ -7,17 +7,18 @@
   </head>
   <body>
     <header>
-      Burnaby Reference Laboratory (BRL)
-      <div id="headeraddr">
-        3680 Gilmore Way Burnaby, BC V5G 4V8 604-431-5005
+      <div id="header">
+        Burnaby Reference Laboratory (BRL)
+        <div id="headeraddr">
+          3680 Gilmore Way Burnaby, BC V5G 4V8 604-431-5005
+        </div>
       </div>
+      <img id="qr" src="./lifelab-qr.png" alt="" />
     </header>
     <div id="top">
       Name: Vladimir Chub | DOB: 10/23/1969 | MRN:
       00000000-0953-B77D-3AE2-520F8036C288 | Report: 06/06/22
     </div>
-
-    <img id="qr" src="./lifelab-qr.png" alt="" />
 
     <h1 id="testname">
       SARS-COV-2 RNA, QL NAAT, RT PCR/TMA (COVID-19) - Details
@@ -27,14 +28,35 @@
       Status: <span>Final result (Collected: 06/06/2022 3:34 PM)</span>
     </div>
 
-    <div id="component"></div>
-
-    <div id="content">
+    <div id="component">
       <ul id="patient">
         <li><span>NAME</span>: Vladimir Chub</li>
         <li><span>MRN</span>: E55730365</li>
         <li><span>DOB</span>: 10/23/1969</li>
       </ul>
+
+      <table>
+        <tr>
+          <td>Component</td>
+          <td>Value Flag</td>
+          <td>Ref Range</td>
+          <td>Units</td>
+          <td>Status</td>
+        </tr>
+        <tr>
+          <td>SARS-COV-2 RNA, QL NAAT, RT PCR/TMA (COVID-19)</td>
+          <td></td>
+          <td><span>NOT DETECTED</span></td>
+          <td></td>
+          <td>Final</td>
+        </tr>
+      </table>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <div id="content">
       <div id="message">
         Hello,
         <br />
@@ -59,26 +81,8 @@
         negative test result.
         <br />
         <br />
-        <br />
-        <table>
-          <tr>
-            <td>Component</td>
-            <td>Value Flag</td>
-            <td>Ref Range</td>
-            <td>Units</td>
-            <td>Status</td>
-          </tr>
-          <tr>
-            <td>SARS-COV-2 RNA, QL NAAT, RT PCR/TMA (COVID-19)</td>
-            <td></td>
-            <td><span>NOT DETECTED</span></td>
-            <td></td>
-            <td>Final</td>
-          </tr>
-        </table>
-        <br />
-        <br />
         <div id="comment">
+          <p>Comments</p>
           <p>
             A Not Detected result means that SARS-CoV-2 RNA was not present in
             the specimen above the limit of detection.
@@ -132,11 +136,14 @@
     <footer>3680 Gilmore Way Burnaby, BC V5G 4V8 604-431-5005</footer>
     <style>
       header {
+        display: flex;
+      }
+      #header {
         font-family: cursive;
-        font-size: 3em;
-        background: lightgrey;
+        font-size: 2.5em;
+        <!-- background: lightgrey; -->
         border-radius: 0.5em;
-        width: 17em;
+        width: 16em;
         padding: 10px;
       }
       #headeraddr {
