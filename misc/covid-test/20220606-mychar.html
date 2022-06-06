@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>mychar</title>
+  </head>
+  <body>
+    <header>
+      Burnaby Reference Laboratory (BRL)
+      <div id="headeraddr">
+        3680 Gilmore Way Burnaby, BC V5G 4V8 604-431-5005
+      </div>
+    </header>
+    <div id="top">
+      Name: Vladimir Chub | DOB: 10/23/1969 | MRN:
+      00000000-0953-B77D-3AE2-520F8036C288 | Report: 06/06/22
+    </div>
+
+    <img id="qr" src="./lifelab-qr.png" alt="" />
+
+    <h1 id="testname">
+      SARS-COV-2 RNA, QL NAAT, RT PCR/TMA (COVID-19) - Details
+    </h1>
+
+    <div id="status">
+      Status: <span>Final result (Collected: 06/06/2022 3:34 PM)</span>
+    </div>
+
+    <div id="component"></div>
+
+    <div id="content">
+      <ul id="patient">
+        <li><span>NAME</span>: Vladimir Chub</li>
+        <li><span>MRN</span>: E55730365</li>
+        <li><span>DOB</span>: 10/23/1969</li>
+      </ul>
+      <div id="message">
+        Hello,
+        <br />
+        <br />
+        You have a <span id="green">NEGATIVE</span> Covid-19 Test Result.
+        <br />
+        <br />
+        A negative test result does not completely rule out being infected with
+        COVID-19.
+        <br />
+        If you test negative for COVID-19, this means the virus was not detected
+        at the time your specimen was collected. It is still possible that you
+        were very early in your infection at the time of your specimen
+        collection and that you could test positive later.
+        <br />
+
+        Also, you could be exposed later and still develop the illness. For all
+        these reasons, it is important to follow precaution quidence, including
+        but not limited to frequent hand washing, social distancing, wearing a
+        face covering, covering coughs and sneezes, monitoring symptoms, and
+        cleaning and disinfectant of frequently touched surfaces -- even after a
+        negative test result.
+        <br />
+        <br />
+        <br />
+        <table>
+          <tr>
+            <td>Component</td>
+            <td>Value Flag</td>
+            <td>Ref Range</td>
+            <td>Units</td>
+            <td>Status</td>
+          </tr>
+          <tr>
+            <td>SARS-COV-2 RNA, QL NAAT, RT PCR/TMA (COVID-19)</td>
+            <td></td>
+            <td><span>NOT DETECTED</span></td>
+            <td></td>
+            <td>Final</td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <div id="comment">
+          <p>
+            A Not Detected result means that SARS-CoV-2 RNA was not present in
+            the specimen above the limit of detection.
+          </p>
+          <p>
+            A Not Detected result does not rule out the possibility of COVID-19
+            and should not be used as the sole basis for treatment or patient
+            management decisions. If COVID-19 is still suspected, based on
+            exposure history together with other clinical findings, re-testing
+            should be considered in the context of clinical observations and
+            epidemiological data for patient management decisions.
+          </p>
+          <p>
+            Test Method: Nucleic Acid Amplification Test including reverse
+            transcription polymerase chain reaction (RT-PCR and transcription
+            mediated amplification (TMA). The test method meets the US Centers
+            for Disease Control and prevention (CDC) pre departure and arrival
+            requirement for viral test for COVID-19 dated January 28, 2021.
+            Testing requirements for traveling may change with time. The patient
+            is responsible for determining the test requirements for each nation
+            while they are traveling.
+          </p>
+          <p>
+            Please review the "Fact Sheets" and authorized labeling available
+            for health care providers and patients using the following websites:
+            <br />
+            https://www.lifelabs.com/home/Covid-19/HCP/NAAT/fact-sheet2
+            https://www.lifelabs.com/home/Covid-19/Patients/NAAT/
+            <br />
+            fact-sheet2
+          </p>
+          <p>
+            Due to the current public health emergency, Lifelabs Diagnostics is
+            accepting samples from appropriate clinical sources collected using
+            wide variety of swabs and transport media for COVID-19. Not detected
+            test results derived from specimens received in non- commercially
+            manufactured viral collection kits should be cautiously evaluated
+            and take extra precautions such as such as additional clinical
+            monitoring, including collection of an additional specimen.
+          </p>
+          <p>
+            Additional information about COVID-19 can be found at the Lifelabs
+            Diagnostics website:
+            <br />
+            www.lifelabs.com/Covid19.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>3680 Gilmore Way Burnaby, BC V5G 4V8 604-431-5005</footer>
+    <style>
+      header {
+        font-family: cursive;
+        font-size: 3em;
+        background: lightgrey;
+        border-radius: 0.5em;
+        width: 17em;
+        padding: 10px;
+      }
+      #headeraddr {
+        font-size: 10px;
+      }
+      td {
+        border: dotted 1px black;
+      }
+      td span {
+        font-weight: bold;
+      }
+      #top {
+        text-align: left;
+        padding: 5px;
+      }
+      #testname {
+        color: red;
+        font-size: 1.2em;
+      }
+      #testname {
+        font-weight: bold;
+      }
+      #content {
+        width: 50em;
+        padding-left: 2em;
+      }
+      #status span {
+        font-weight: bold;
+      }
+      #patient {
+        list-style: none;
+        padding: 0;
+      }
+      #patient span {
+        font-weight: bold;
+      }
+      #green {
+        color: green;
+        font-weight: bold;
+      }
+      #comment {
+        width: 600px;
+        font-family: monospace;
+      }
+      footer {
+        margin-top: 30px;
+      }
+    </style>
+  </body>
+</html>
