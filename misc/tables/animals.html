@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      table {
+        table-layout: fixed;
+        font-size: 0.8rem;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px 20px;
+        border: 1px solid rgb(190, 190, 190);
+      }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
+      #animals tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      #yellow {
+        width: 20%;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <h1>Animals table</h1>
+    <table id="animals">
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster and a lot of others ... .... ...</td>
+      </tr>
+    </table>
+
+    <h1>Yellow column</h1>
+    <table id="yellow">
+      <colgroup>
+        <col />
+        <col class="yellow" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Data 1</th>
+          <th>Data 2</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Calcutta</td>
+        <td>Orange</td>
+      </tr>
+      <tr>
+        <td>Robots</td>
+        <td>Jazz</td>
+      </tr>
+      <tr>
+        <td>Math</td>
+        <td>Physics ... .... .... ...</td>
+      </tr>
+    </table>
+  </body>
+</html>
