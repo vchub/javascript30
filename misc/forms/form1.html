@@ -34,6 +34,7 @@
               max="10"
               value="5"
             />
+							<output id='volumevalue' for='volume'>5</output>
           </li>
           <li>
             <!-- <input type="submit" id="submit" /> -->
@@ -62,12 +63,15 @@
 </fieldset>
 
 
+
+
+
 <fieldset>
 <input type="file" accept="image/*;capture=camera">
 <input type="file" accept="video/*;capture=camcorder">
 <input type="file" accept="audio/*;capture=microphone">
-
 </fieldset>
+
 
 
     </form>
@@ -103,6 +107,9 @@
         margin-left: 10%;
         width: 10%;
       }
+			input:invalid{
+				border: 2px solid red;
+			}
     </style>
 
     <script>
@@ -121,6 +128,10 @@
       myform['volume'].addEventListener('change', (e) => {
         console.log('volume', e.target.value);
       });
+
+			myform.volume.addEventListener('input', (e)=>{
+				myform.volumevalue.textContent = myform.volume.value
+			})
 
       <!-- console.log('e', e); -->
       <!-- console.log('data', name.value, email.value, msg.value, volume.value); -->
